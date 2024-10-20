@@ -1,18 +1,19 @@
+/* 进退法用于确定单变量函数的一个包含极小值点的区间。它的基本思想是从一个初始点出发，按照一定的步长前进或后退，直到找到函数值开始上升的点，这样就确定了一个包含极小值点的区间。 */
+
 #include <stdio.h>
 #include <math.h>
-
 
 double f(double x) {
     return log(1 + x + x*x + exp(x + x*x))/(1 + x*x) + log(1 + 2*exp(x - 7));
 }
 
 void Brackeing(double (*func)(double), double x0, double h, double *xmin, double *xmax) {
-    const double a = 2.0; // 加倍系数
-    int k = 1; // 迭代数
-    double lambda = 0.0; // 记录答案
-    int flag = 0; // 标记
-    double x[11]; // 申请自变量空间
-    double f_val[11]; // 申请函数值空间
+    const double a = 2.0;   // 加倍系数
+    int k = 1;              // 迭代数
+    double lambda = 0.0;    // 记录答案
+    int flag = 0;           // 标记
+    double x[11];           // 申请自变量空间
+    double f_val[11];       // 申请函数值空间
 
     x[1] = x0; // 自变量赋值
     f_val[1] = func(x[1]); // 函数赋值

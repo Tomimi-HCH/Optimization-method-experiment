@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-// 假设的目标函数，这里使用示例函数
 double f(double x) {
-    // 替换为目标函数的实现
     return log(1 + x + x*x + exp(x + x*x))/(1 + x*x) + log(1 + 2*exp(x - 7));
 }
 
@@ -39,7 +37,7 @@ void MinHJ(double (*func)(double), double a, double b, double eps, double *x, do
 }
 
 int main() {
-    double a = 0.0, b = 5.0, eps = 1e-4; // 定义区间和精度
+    double a = -1.5, b = -0.3, eps = 1e-6; // 定义区间和精度
     double x, miny;
 
     MinHJ(f, a, b, eps, &x, &miny);
