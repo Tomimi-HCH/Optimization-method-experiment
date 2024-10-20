@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-// 假设的目标函数，这里使用示例函数
+
 double f(double x) {
     return log(1 + x + x*x + exp(x + x*x))/(1 + x*x) + log(1 + 2*exp(x - 7));
 }

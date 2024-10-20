@@ -38,6 +38,8 @@ void MinHJ(double (*func)(double), double a, double b, double eps, double *x, do
     *miny = func(*x);
 }
 
+// a,b 范围 [−1.85, −1.57] 、[−1.55, 1.25] 、[1.29, 1.72]
+
 int main() {
     double a = -1.85, b = -1.57, eps = 1e-6; // 定义区间和精度
     double x, miny;
