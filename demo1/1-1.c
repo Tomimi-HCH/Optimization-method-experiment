@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
+//我在这里修改代码，看看上传云端是否成功
 // 定义函数 f(x)
 double f(double x) {
     return log(1 + x + pow(x, 2) + exp(pow(x, 2))) / (1 + pow(x, 2)) + log(1 + 2 * exp(-7));
